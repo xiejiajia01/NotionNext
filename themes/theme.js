@@ -8,7 +8,7 @@ import { getQueryParam, getQueryVariable, isBrowser } from '../lib/utils'
 export const { THEMES = [] } = getConfig().publicRuntimeConfig
 
 /**
- * 获取主体配置
+ * 获取主体配置 1
  */
 export const getThemeConfig = async themeQuery => {
   if (themeQuery && themeQuery !== BLOG.THEME) {
