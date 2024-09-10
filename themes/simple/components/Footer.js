@@ -37,7 +37,8 @@ export default function Footer (props) {
         <div className="md:p-0 text-center md:text-right text-xs">
          {/* 右侧链接 */}
           {/* <a href="#" className="text-black no-underline hover:underline">Privacy Policy</a> */}
-          <a href="https://beian.miit.gov.cn/#/Integrated/index" style={{ color: 'inherit' }} className="no-underline hover:underline ml-4">
+          <a href="https://beian.miit.gov.cn/" style={{ color: 'inherit' }} className="no-underline hover:underline ml-4">
+// <a href="https://beian.miit.gov.cn/" target="_blank">黔ICP备2022008054号-1</a>
             黔ICP备2022008054号-1
           </a>
           <span className='no-underline ml-4'>
