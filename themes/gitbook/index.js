@@ -159,8 +159,21 @@ const LayoutBase = props => {
                   {/* 所有文章列表 */}
                   <NavPostList filteredNavPages={filteredNavPages} />
                 </div>
-                {/* 页脚 */}
-                <Footer {...props} />
+                {/* 底部固定菜单 */}
+                <div className='mt-2'>
+                  <a
+                    href='https://moyu.specterwords.com'
+                    target='_blank'
+                    className='block text-gray-600 dark:text-gray-300 relative py-2 px-1 hover:bg-gray-50 rounded-md dark:hover:bg-yellow-100 dark:hover:text-yellow-600'
+                    rel='noreferrer'>
+                    <div className='w-full select-none flex items-center gap-2'>
+                      <i className='fas fa-external-link-alt' />
+                      摸鱼单词表
+                    </div>
+                  </a>
+                  {/* 页脚 */}
+                  <Footer {...props} />
+                </div>
               </div>
             </div>
           )}
