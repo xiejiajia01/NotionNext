@@ -15,6 +15,9 @@ export default function Footer(props) {
   const ANALYTICS_BUSUANZI_ENABLE = siteConfig('ANALYTICS_BUSUANZI_ENABLE')
   const copyrightDate =
     parseInt(since) < currentYear ? since + '-' + currentYear : currentYear
+  // 站内互联入口：指向 nce.specterwords.com（新概念英语点读 + 交易训练）。
+  // 地址放在环境变量里，以后换域名只改 .env.production / Vercel 环境变量，不用动代码。
+  const NCE_LINK = process.env.NEXT_PUBLIC_NCE_LINK
 
   return (
     <footer className='relative w-full bg-black px-6 border-t'>
@@ -36,6 +39,15 @@ export default function Footer(props) {
             </a>
           )}
           <BeiAnGongAn />
+          {/* 低调的互联入口：博客页脚指向 nce 站（课文点读 + 交易训练） */}
+          {NCE_LINK && (
+            <a
+              href={NCE_LINK}
+              title="新概念英语点读 / 交易训练"
+              className='no-underline hover:underline ml-4 opacity-50 hover:opacity-100'>
+              📈 交易训练
+            </a>
+          )}
           {ANALYTICS_BUSUANZI_ENABLE && (
             <div className='inline-flex ml-4'>
               <AnalyticsBusuanzi />

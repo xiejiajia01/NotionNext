@@ -11,6 +11,7 @@ import { useRouter } from 'next/router'
 import { createContext, useContext, useEffect, useRef } from 'react'
 import BlogPostBar from './components/BlogPostBar'
 import CONFIG from './config'
+import Footer from './components/Footer'
 import { Style } from './style'
 
 const AlgoliaSearchModal = dynamic(
@@ -43,7 +44,8 @@ const SideBar = dynamic(() => import('./components/SideBar'), { ssr: false })
 const JumpToTopButton = dynamic(() => import('./components/JumpToTopButton'), {
   ssr: false
 })
-const Footer = dynamic(() => import('./components/Footer'), { ssr: false })
+// Footer 由 dynamic(ssr:false) 改为静态导入：页脚里的 ICP 备案号必须由服务端渲染进 HTML，
+// 否则 curl / 备案核查抓到的首页源码里一条备案信息都没有。
 const SearchInput = dynamic(() => import('./components/SearchInput'), {
   ssr: false
 })
